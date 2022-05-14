@@ -1,5 +1,6 @@
 from flask import Flask
 from config import DevConfig
+from flask_sqlachemy import SQLAlchemy
 
 # Initializing application
 app = Flask(__name__)

@@ -5,6 +5,8 @@ from app import app
 
 @main.route('/')
 def index():
-    """"View root page that returns the index page"""
+    """"
+    View root page that returns the index page
+    """
     title= "BlogBusters"
     return render_template('index.html', title=title)

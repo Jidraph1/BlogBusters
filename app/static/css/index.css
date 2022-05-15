@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(34, 97, 76);
+    background-color: rgb(52, 112, 92);
     margin: 0;
     padding: 0;
 
@@ -9,4 +9,8 @@ body{
 .intro {
     padding: 4%;
     margin: 2%
+}
+
+.btn {
+    align-items: center;
 }

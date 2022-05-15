@@ -1,4 +1,12 @@
-.container.intro{
-    width: 70%;
-    height: 20%;
+
+body{
+    background-color: rgb(34, 97, 76);
+    margin: 0;
+    padding: 0;
+
+}
+
+.intro {
+    padding: 4%;
+    margin: 2%
 }

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles %}
+{{super()}}
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200&family=Quicksand&family=Roboto&family=Roboto+Slab:wght@300;400&family=Zen+Antique&display=swap"
+    rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="container-fluid dashboard-intro">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand text-white" href="#">WELCOME, {{ name }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto p-2">
+                <a class="nav-item nav-link active text-white" href="#">HOME <span class="sr-only">(current)</span></a>
+                <a class="text-white nav-item nav-link" href="{{url_for('main.profile')}}">PROFILE</a>
+                <a class="text-white nav-item nav-link" href="{{url_for('main.logout')}}">LOGOUT</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    {% endblock %}

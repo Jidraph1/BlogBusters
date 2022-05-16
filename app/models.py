@@ -16,8 +16,8 @@ class User(UserMixin,db.Model):
     def load_user(user_id):
         return User.query.get(int(user_id))
 
-    def _repr__(self):
-        return f'User {self.username}'
+    # def _repr__(self):
+    #     return f'User {self.username}'
 
 class Post(db.Model):
     __tablename__ = 'posts'

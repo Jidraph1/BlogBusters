@@ -6,6 +6,8 @@ BlogBusters is an application designed to bust the existing myths and misconcept
 # Live Link
 The application is deployed to Heroku under the below live link:
 
+https://blogbuster501.herokuapp.com/
+
 # Technologies used
 The project is solely build using:
 * Python

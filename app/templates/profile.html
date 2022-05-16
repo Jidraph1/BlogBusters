@@ -5,6 +5,7 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200&family=Quicksand&family=Roboto&family=Roboto+Slab:wght@300;400&family=Zen+Antique&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 {% block content %}
 <div class="container-fluid success">
@@ -20,7 +21,7 @@
             </div>
         </div>
         <div class="col-lg-8 col-md-6 col-sm-6">
-            <img class="success-pic" src="https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            <img class="success-pic" src="{{ url_for('static', filename='images/shelf.jpg')}}"
                 alt="">
         </div>
     </div>

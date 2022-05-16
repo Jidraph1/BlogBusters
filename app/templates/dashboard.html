@@ -6,20 +6,21 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200&family=Quicksand&family=Roboto&family=Roboto+Slab:wght@300;400&family=Zen+Antique&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 {% block content %}
 <div class="container-fluid dashboard-intro">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <a class="navbar-brand text-white" href="#">WELCOME, {{ name }}</a>
+        <a class="navbar-brand text-white" href="#">WELCOME, {{ name | capitalize }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto p-2">
-                <a class="nav-item nav-link active text-white" href="#">HOME <span class="sr-only">(current)</span></a>
-                <a class="text-white nav-item nav-link" href="{{url_for('main.profile')}}">PROFILE</a>
-                <a class="text-white nav-item nav-link" href="{{url_for('main.logout')}}">LOGOUT</a>
+                <a class="nav-item nav-link active text-white" href="#">HOME <span class="sr-only"></span></a>
+                <a class="text-white nav-item nav-link" href="{{url_for('main.profile')}}">Profile</a>
+                <a class="text-white nav-item nav-link" href="{{url_for('main.logout')}}">Logout</a>
             </div>
         </div>
     </nav>
@@ -28,23 +29,23 @@
         <div class="row text-center intro-display">
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <img class="dashboard-pic"
-                    src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="{{ url_for('static', filename='images/coffee.jpg')}}"
                     alt="">
-                <p class="text-blog">Travel</p>
+                <p class="text-blog">Coffee</p>
                 <a href="{{url_for('main.blog')}}"><button class="btn blog-btn btn-dark">Write a Blog</button></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <img class="dashboard-pic"
-                    src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="{{ url_for('static', filename='images/cheers.jpg')}}"
                     alt="">
-                <p class="text-blog">Travel</p>
+                <p class="text-blog">Sunday Funday</p>
                 <a href="{{url_for('main.blog')}}"><button class="btn blog-btn btn-dark">Write a Blog</button></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <img class="dashboard-pic"
-                    src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="{{ url_for('static', filename='images/cocktail.jpg')}}"
                     alt="">
-                <p class="text-blog">Travel</p>
+                <p class="text-blog">Bartenders</p>
                 <a href="{{url_for('main.blog')}}"><button class="btn blog-btn btn-dark">Write a Blog</button></a>
             </div>
         </div>

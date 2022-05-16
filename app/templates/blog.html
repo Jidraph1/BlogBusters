@@ -6,6 +6,8 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@200&family=Quicksand&family=Roboto&family=Roboto+Slab:wght@300;400&family=Zen+Antique&display=swap"
     rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 {% block content %}
 <div class="container-fluid post-blog">
@@ -25,7 +27,7 @@
             
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6">
-            <img class="post-pic" src="https://images.pexels.com/photos/163084/typewriter-vintage-old-vintage-typewriter-163084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            <img class="post-pic" src="{{ url_for('static', filename='images/balentines.jpg')}}"
                 alt="">
         </div>
     </div>

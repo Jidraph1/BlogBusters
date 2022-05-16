@@ -6,20 +6,15 @@ class Config:
 
 
 class ProdConfig(Config):
-    '''
-    Production  configuration child class
 
-    Args:
-        Config: The parent configuration class with General configuration settings
-    '''
-    pass
-
+    SQLALCHEMY_DATABASE_URI =os.environ.get('DATABASE_URL').replace("://", "ql://",1)
+    DEBUG = True
 
 class DevConfig(Config):
 
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://jidraph:6720@localhost/blogbusters'
     SECRET_KEY = 'jibberishjibberish'
-    DEBUG = True
+
 
 config_options = {
     'development' : DevConfig,

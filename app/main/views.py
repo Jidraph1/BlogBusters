@@ -70,6 +70,21 @@ def dashboard():
     
     return render_template('dashboard.html', name=current_user.username, post=post, form=form, description=form.description.data)
 
+@main.route('/blog', methods=['GET', 'POST'])
+def blog():
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(author=form.author.data, title=form.title.data, content=form.content.data)
+        form.author.data = ''
+        form.title.data = ''
+        form.content.data = ''
+        
+        
+        db.session.add(post)
+        db.session.commit()
+    return render_template('blog.html', form=form)
+
+
 @main.route('/profile')
 def profile():
    

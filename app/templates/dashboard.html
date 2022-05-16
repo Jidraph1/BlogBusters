@@ -49,8 +49,30 @@
             </div>
         </div>
     </div>
-
-    <
+<div class="container text-centrer">
+    <h2 class="header">Lets bust some Myths:</h2>
+</div>
+<div class="container ">
+    <div class="blog-section">
+        {% for p in post %}
+        <h5 class="header"> {{p.title}}</h5>
+        <p>{{p.content}}</p>
+        <em>
+            <p>Written by: {{p.author}}</p>
+        </em>
+        <form class="form-signin comment-form" method="POST" action="/dashboard">
+            {{ form.hidden_tag() }}
+            {{ wtf.form_field(form.description) }}
+            <button class="btn btn-dark comment-button" type="submit">Post</button>
+        </form>
+        <hr>
+        {% for comment in comments %}
+        <p>{{comment.description}}</p>
+        {% endfor %}
+        {% endfor %}
+        </div>
+</div>
+    
 
 
 

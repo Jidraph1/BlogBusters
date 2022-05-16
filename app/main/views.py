@@ -52,6 +52,29 @@ def failure():
 
     return render_template('failure.html')
 
+@main.route('/dashboard', methods=['GET', 'POST'])
+@login_required
+
+def dashboard():
+    form = CommentForm()
+    post = Post.query.all()
+    comment = Comment.query.all()
+    if form.validate_on_submit():
+        comment = Comment(description=form.description.data)
+        form.description.data = ''
+        
+        
+        
+        db.session.add(comment)
+        db.session.commit()
+    
+    return render_template('dashboard.html', name=current_user.username, post=post, form=form, description=form.description.data)
+
+@main.route('/profile')
+def profile():
+   
+    return render_template('profile.html', name=current_user.username, email=current_user.email )
+
 @main.route('/logout')
 @login_required
 def logout():

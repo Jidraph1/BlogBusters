@@ -1,5 +1,15 @@
 # BlogBusters
 
+# Description
+BlogBusters is an application designed to bust the existing myths and misconceptions in the bar industry.The User creates an account on where he can comment on the existing Blog pitched by the admin to helo clarify on the wrong information out there about the bar industry.
+
+# Live Link
+The application is deployed to Heroku under the below live link:
+
+
+
+# Author
+The sole author of this project is Jidraph Kimachia
 
 MIT License
 
